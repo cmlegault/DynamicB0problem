@@ -108,7 +108,6 @@ ggsave("ssbplot.png")
 relssbplot <- ggplot(sdf, aes(x=Year, y=reldynB0, group=steep, color=steep)) +
   geom_line() +
   geom_line(aes(x=Year, y=relSSB, group=steep, color=steep), size=1.5) +
-  facet_wrap(steep~., scales = "free_y") +
   ylab("Relative SSB") +
   theme_bw()
 print(relssbplot)
