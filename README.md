@@ -19,7 +19,7 @@ The expected recruitment in the following year is calculated from the Beverton a
 ### What happened?
 As mentioned above, the four stock assessments were nearly identical. They all had the same objective function value (3773.103), the SSB varied by a maximum of 0.1 metric tons (mean SSB 310,000 metric tons), and the age-1 recruitment estimates varied by a maximum of 1,000 fish (mean recruitment 4.1 billion fish). However, due to fixing the steepness at different values, the estimated R0 varied widely:  
 |Steepness|R0 (thousands)| 
-|---------|--------------| 
+|:-------:|-------------:| 
 |0.4|14,493,710| 
 |0.6|4,669,791| 
 |0.8|3,621,096| 
@@ -34,7 +34,7 @@ and relative scales (thin line dynamic B0, thick line model estimate including f
 
 The current depeletion was estimated as the SSB in the final year from the original assessment divided by the dynamic B0 value in the final year, and varied widely:  
 |Steepness|Current Depletion| 
-|---------|-----------------| 
+|:-------:|----------------:| 
 |0.4|0.055| 
 |0.6|0.198| 
 |0.8|0.266| 
