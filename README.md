@@ -17,7 +17,7 @@ A function was written to use the rdat file output by ASAP to calculate dynamic 
 The expected recruitment in the following year is calculated from the Beverton and Holt stock recruitment curve estimates of alpha and beta in the rdat file as E(R) = alpha * SSB / (beta + SSB). The recruitment at age 1 in the following year is then created by multiplying the expected recruitment by exponentiating the log-scale recruitment residual: R = E(R) * exp(log_resid) estimated for that year. This means that whatever environmental effects caused recruitment to deviate from the curve would occur again under this no fishing situation. The remainder of the ages in the following year are filled using the exponential decline assocaited with natural moratality: N(y+1,a+1) = N(y,a) * exp(-M(y,a)), with the plus group additionally accounting for the survivors from the previous plus group. The SSB is calculated for this year and used to estimate recruitemnt in the following year. This process continues through all the years estimated in the rdat file. The function then returns the time series of spawning stock biomass under the assumption of no fishing (dynamic B0).
 
 ### What happened?
-As mentioned above, the four stock assessments were nearly identical. They all had the same objective function value (3773.103), the SSB varied by a maximum of 0.1 metric tons (mean SSB 310,000 metric tons), and the age-1 recruitment estimates varied by a maximum of 1,000 fish (mean recruitment 4.1 billion fish). However, due to fixing the steepness at different values, the estimated R0 varied widely:
+As mentioned above, the four stock assessments were nearly identical. They all had the same objective function value (3773.103), the SSB varied by a maximum of 0.1 metric tons (mean SSB 310,000 metric tons), and the age-1 recruitment estimates varied by a maximum of 1,000 fish (mean recruitment 4.1 billion fish). However, due to fixing the steepness at different values, the estimated R0 varied widely:  
 |Steepness|R0 (thousands)| 
 |---------|--------------| 
 |0.4|14,493,710| 
@@ -32,7 +32,7 @@ Computing the dynamic B0 resulted in large differences among the four steepness 
 and relative scales (thin line dynamic B0, thick line model estimate including fishing).
 ![relative SSB plot](relssbplot.png)
 
-The current depeletion was estimated as the SSB in the final year from the original assessment divided by the dynamic B0 value in the final year, and varied widely:
+The current depeletion was estimated as the SSB in the final year from the original assessment divided by the dynamic B0 value in the final year, and varied widely:  
 |Steepness|Current Depletion| 
 |---------|-----------------| 
 |0.4|0.055| 
