@@ -26,7 +26,7 @@ As mentioned above, the four stock assessments were nearly identical. They all h
 | 0.8       | 3,621,096      |
 | 1.0       | 3,193,192      |
 
-The stock recruitment curves all pass through the data reasonably well.
+The stock recruitment curves all pass through the data reasonably well (the end points of each stock recruit curve denote the unfished condition in equilibrium).
 ![SR plot](srplot.png)
 
 Computing the dynamic B0 resulted in large differences among the four steepness values both in absolute ![SSB plot](ssbplot.png)
