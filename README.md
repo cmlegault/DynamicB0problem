@@ -18,12 +18,12 @@ The expected recruitment in the following year is calculated from the Beverton a
 
 ### What happened?
 As mentioned above, the four stock assessments were nearly identical. They all had the same objective function value (3773.103), the SSB varied by a maximum of 0.1 metric tons (mean SSB 310,000 metric tons), and the age-1 recruitment estimates varied by a maximum of 1,000 fish (mean recruitment 4.1 billion fish). However, due to fixing the steepness at different values, the estimated R0 varied widely:
-| Steepness | R0 (thousands) |
-| --------- | -------------- |
-| 0.4       | 14,493,710     |
-| 0.6       |  4,669,791     |
-| 0.8       |  3,621,096     |
-| 1.0       |  3,193,192     |
+|Steepness |R0 (thousands) |
+|--------- |-------------- |
+|0.4       |14,493,710     |
+|0.6       |4,669,791     |
+|0.8       |3,621,096     |
+|1.0       |3,193,192     |
 
 The stock recruitment curves all pass through the data reasonably well.
 ![SR plot](srplot.png)
@@ -33,12 +33,12 @@ and relative scales (thin line dynamic B0, thick line model estimate including f
 ![relative SSB plot](relssbplot.png)
 
 The current depeletion was estimated as the SSB in the final year from the original assessment divided by the dynamic B0 value in the final year, and varied widely:
-| Steepness | Current Depletion |
-| --------- | ----------------- |
-| 0.4       |   0.055   |
-| 0.6       |   0.198   |
-| 0.8       |   0.266   |
-| 1.0       |   0.303   |
+|Steepness |Current Depletion |
+|--------- |----------------- |
+|0.4       |0.055   |
+|0.6       |0.198   |
+|0.8       |0.266   |
+|1.0       |0.303   |
 
 ## Conclusion
 The dynamic B0 approach depends on the ability to estimate the stock recruitment relationship correctly. In situations where this is not possible, such as the Atlantic herring stock assessment, the approach should not be used.
