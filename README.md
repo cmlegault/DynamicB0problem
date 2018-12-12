@@ -29,7 +29,7 @@ The stock recruitment curves all pass through the data reasonably well.
 ![SR plot](srplot.png)
 
 Computing the dynamic B0 resulted in large differences among the four steepness values both in absolute ![SSB plot](ssbplot.png)
-and relative scales.
+and relative scales (thin line dynamic B0, thick line model estimate including fishing).
 ![relative SSB plot](relssbplot.png)
 
 The current depeletion was estimated as the SSB in the final year from the original assessment divided by the dynamic B0 value in the final year, and varied widely:
