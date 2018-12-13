@@ -94,7 +94,11 @@ sdf <- data.frame(Year = rep(years, 4),
                   relSSB = c(asap04$SSB / asap04$SSB[1],
                              asap06$SSB / asap06$SSB[1],
                              asap08$SSB / asap08$SSB[1],
-                             asap10$SSB / asap10$SSB[1]))
+                             asap10$SSB / asap10$SSB[1]),
+                  depletion = c(asap04$SSB / steep04B0,
+                                asap06$SSB / steep06B0,
+                                asap08$SSB / steep08B0,
+                                asap10$SSB / steep10B0))
 
 ssbplot <- ggplot(sdf, aes(x=Year, y=dynB0, group=steep, color=steep)) +
   geom_line() +
@@ -112,6 +116,14 @@ relssbplot <- ggplot(sdf, aes(x=Year, y=reldynB0, group=steep, color=steep)) +
   theme_bw()
 print(relssbplot)
 ggsave("relssbplot.png")
+
+depletionplot <- ggplot(sdf, aes(x=Year, y=depletion, group=steep, color=steep)) +
+  geom_line() +
+  ylab("Depletion (SSB / dynamic B0)") +
+  theme_bw()
+print(depletionplot)
+ggsave("depletionplot.png")
+
 
 # get most recent year depletion using dynamic B0 approach
 curr04 <- asap04$SSB[nyears] / steep04B0[nyears]

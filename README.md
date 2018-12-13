@@ -33,6 +33,9 @@ Computing the dynamic B0 resulted in large differences among the four steepness 
 and relative scales, where the time series are relative to the value in the first year (thin line dynamic B0, thick line model estimate including fishing).
 ![relative SSB plot](relssbplot.png)
 
+Dividing SSB by the dynamic B0 in that year results in an estimate of depletion. The initial years should not be emphasized due to the assumption of the same starting numbers at age in the SSB and dynamic B0 calculations (the reason the first year depletion is not exactly 1.0 is due to the time of spawning being 0.85 for Atlantic herring). The recent years can be used as a measure of whether the stock is overfished or not, with typical depletion levels associated with being overfished around 0.4.
+![depletion plot](depletionplot.png)
+
 The current depeletion was estimated as the SSB in the final year from the original assessment divided by the dynamic B0 value in the final year, and varied widely:  
 
 | Steepness | Current Depletion | 
