@@ -74,6 +74,9 @@ srplot <- ggplot(srdf, aes(x=SSB, y=Recruits)) +
 print(srplot)
 ggsave("srplot.png")
 
+# make SR plot showing how recruit dev at one SSB gets translated into diff values for another SSB
+
+
 # calculate dynamic B0 for each run
 steep04B0 <- calcDynamicB0(asap04)
 steep06B0 <- calcDynamicB0(asap06)
