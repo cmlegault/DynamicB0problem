@@ -72,10 +72,33 @@ srplot <- ggplot(srdf, aes(x=SSB, y=Recruits)) +
   geom_point(data=srdatdf, aes(x=SSB, y=Recruits)) +
   theme_bw()
 print(srplot)
-ggsave("srplot.png")
+ggsave("srplot.png", srplot)
 
 # make SR plot showing how recruit dev at one SSB gets translated into diff values for another SSB
+ssbpoint <- min(srdatdf$SSB)
+rpoint <- srdatdf$Recruits[srdatdf$SSB == ssbpoint]
+rdev04 <- log(rpoint) - log(asap04$SR.parms$SR.alpha * ssbpoint / (asap04$SR.parms$SR.beta + ssbpoint))
+rdev06 <- log(rpoint) - log(asap06$SR.parms$SR.alpha * ssbpoint / (asap06$SR.parms$SR.beta + ssbpoint))
+rdev08 <- log(rpoint) - log(asap08$SR.parms$SR.alpha * ssbpoint / (asap08$SR.parms$SR.beta + ssbpoint))
+rdev10 <- log(rpoint) - log(asap10$SR.parms$SR.alpha * ssbpoint / (asap10$SR.parms$SR.beta + ssbpoint))
+ssbnew <- 500000
+rnew04 <- (asap04$SR.parms$SR.alpha * ssbnew / (asap04$SR.parms$SR.beta + ssbnew)) * exp(rdev04)
+rnew06 <- (asap06$SR.parms$SR.alpha * ssbnew / (asap06$SR.parms$SR.beta + ssbnew)) * exp(rdev06)
+rnew08 <- (asap08$SR.parms$SR.alpha * ssbnew / (asap08$SR.parms$SR.beta + ssbnew)) * exp(rdev08)
+rnew10 <- (asap10$SR.parms$SR.alpha * ssbnew / (asap10$SR.parms$SR.beta + ssbnew)) * exp(rdev10)
+pointdf <- data.frame(SSB = ssbpoint,
+                      Recruits = rpoint)
+newdf <- data.frame(steep = as.factor(mysteep),
+                    SSB = rep(ssbnew, 4),
+                    Recruits = c(rnew04, rnew06, rnew08, rnew10))
 
+srpointplot <- ggplot(srdf, aes(x=SSB, y=Recruits)) +
+  geom_line(aes(group=steep, color=steep)) +
+  geom_point(data=pointdf, aes(x=SSB, y=Recruits)) +
+  geom_point(data=newdf, aes(x=SSB, y=Recruits, group=steep, color=steep)) +
+  theme_bw()
+print(srpointplot)
+ggsave("srpointplot.png", srpointplot)
 
 # calculate dynamic B0 for each run
 steep04B0 <- calcDynamicB0(asap04)

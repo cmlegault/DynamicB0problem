@@ -29,6 +29,9 @@ As mentioned above, the four stock assessments were nearly identical. They all h
 The stock recruitment curves all pass through the data reasonably well (the end points of each stock recruit curve denote the unfished condition in equilibrium).
 ![SR plot](srplot.png)
 
+The reaason the underlying stock recruitment relationship is important is that the dynamic BO approach uses the deviations from the stock recruitment relationship when computing the future recruitment. For example, the lowest estimated SSB of 53084 occurred in 1983 (black point on plot below). If in the dynamic B0 calculation, the SSB in 1983 was 500000, then including the lognormal deviation for each of the four stock recruitment relationships would result in recruitments for that year ranging from 1.3 million to 10.0 million (colored points in plot below). Note that the black point shows both positive and negative deviations from the different stock recruitment relationships, amplifying the differences among the four cases.
+![srpoint plot](srpointplot.png)
+
 Computing the dynamic B0 resulted in large differences among the four steepness values both in absolute ![SSB plot](ssbplot.png)
 and relative scales, where the time series are relative to the value in the first year (thin line dynamic B0, thick line model estimate including fishing).
 ![relative SSB plot](relssbplot.png)
